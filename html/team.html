@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDS Team</title>
+    
+    <link rel="stylesheet" href="../css/team.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="DDS">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="team.html">Работники</a></li>
+                <li><a href="projects.html">Проекты</a></li>
+                <li><a href="help.html">чем мы можем помочь</a></li>
+                <li><a href="price.html">Ценники</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>    
+    <h1> Наши сотрудники</h1>
+
+    <div class="employee-grid">
+        <div class="employee-card" onclick="openPopup(0)">
+            <img src="../Video/me.jpg" alt="Даниэль">
+            <h3>Даниэль</h3>
+            <p>Руководитель проекта</p>
+        </div>
+
+        <div class="employee-card" onclick="openPopup(1)">
+            <img src="../Video/nikita.JPG" alt="Никита">
+            <h3>Никита</h3>
+            <p>FullStack-разработчик</p>
+        </div>
+
+        <div class="employee-card" onclick="openPopup(2)">
+            <img src="../Video/yrik.jpg" alt="Ярослав">
+            <h3>Ярослав</h3>
+            <p>Backend-разработчик</p>
+        </div>
+
+        <div class="employee-card" onclick="openPopup(3)">
+            <img src="../Video/daud.jpg" alt="Дауд">
+            <h3>Дауд</h3>
+            <p>Frontend-разработчик</p>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+    <div id="popup-0" class="popup">
+        <h3>Даниэль</h3>
+        <p>Руководитель проекта с опытом более 5 лет. Занимается управлением команды и разработкой стратегий развития.</p>
+        <button class="popup-close" onclick="closePopup()">Закрыть</button>
+    </div>
+
+    <div id="popup-1" class="popup">
+        <h3>Никита</h3>
+        <p>FullStack-разработчик, владеющий современными технологиями. Отвечает за разработку как фронтенда, так и бекенда.</p>
+        <button class="popup-close" onclick="closePopup()">Закрыть</button>
+    </div>
+
+    <div id="popup-2" class="popup">
+        <h3>Ярослав</h3>
+        <p>Backend-разработчик, специализирующийся на создании и оптимизации серверных приложений.</p>
+        <button class="popup-close" onclick="closePopup()">Закрыть</button>
+    </div>
+
+    <div id="popup-3" class="popup">
+        <h3>Дауд</h3>
+        <p>Frontend-разработчик с вниманием к деталям. Создает современные и удобные интерфейсы.</p>
+        <button class="popup-close" onclick="closePopup()">Закрыть</button>
+    </div>
+
+    <script>
+        function openPopup(index) {
+            document.getElementById(`popup-${index}`).classList.add('active');
+            document.getElementById('overlay').classList.add('active');
+        }
+
+        function closePopup() {
+            document.querySelectorAll('.popup').forEach(popup => popup.classList.remove('active'));
+            document.getElementById('overlay').classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>

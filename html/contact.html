@@ -1,0 +1,64 @@
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DDS Contacts</title>
+        <head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        </head>
+        <link rel="stylesheet" href="../css/contact.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="Market Profi">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="team.html">Работники</a></li>
+                    <li><a href="projects.html">Проекты</a></li>
+                    <li><a href="help.html">чем мы можем помочь</a></li>
+                    <li><a href="price.html">Ценники</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+        <video autoplay muted loop>
+            <source src="../Video/3141295-hd_1920_1080_30fps.mp4" type="video/mp4">
+            Ваш браузер не поддерживает тег video.
+        </video>
+        <section class="contact-info">
+            <h2>Контактная информация</h2>
+            <p><strong>Адрес:</strong> г. Бишкек, ул. Ахунбаева 123</p>
+            <p><strong>Телефон:</strong> +996 312 123 456</p>
+            <p><strong>Email:</strong> info@lightacademy.kg</p>
+            <p><strong>Часы работы:</strong> Пн-Пт, 09:00 - 18:00</p>
+        </section>
+
+        <ul class="sci">
+            <li style="--clr: #0088cc;">
+                <a href="https://t.me/MarketProfi_Team" target="_blank">
+                    <i class="fab fa-telegram"></i> <!-- Telegram Icon -->
+                </a>
+            </li>
+            <li style="--clr: #e4405f;">
+                <a href="https://www.instagram.com/business_v_plus" target="_blank">
+                    <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+                </a>
+            </li>
+        </ul>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll(".sci li a"), {
+                max: 30,
+                speed: 400,
+                glare: true
+            });
+        
+        </script>
+    </body>
+    </html>

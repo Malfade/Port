@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #B4B4B4;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Adjust based on header height */
+    color: white; /* Make text white */
+    position: relative; /* Needed to ensure content is above video */
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Video stays in the background */
+    min-height: 100vh; /* Ensure video takes full height of screen */
+}
+
+header {
+    margin-top: -78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000;
+    margin-bottom: 60px;
+}
+
+header .logo {
+    position: absolute;
+    left: 2rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff8c00;
+    transition: width 0.3s;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+header nav ul li a:hover {
+    color: #ff8c00;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.sci {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    color: #333;
+    font-size: 6em;
+    text-decoration: none;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: background 0.25s;
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+}
+
+.sci li a:hover {
+    background: var(--clr);
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.25);
+    border: 5px solid var(--clr);
+}
+
+.sci li a i {
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.sci li a:hover i {
+    transform: scale(1.5) translateZ(50px);
+    color: #fff;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 1200px) {
+    header nav ul {
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .employee-card {
+        width: 220px;
+    }
+
+    .employee-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .employee-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    header nav ul {
+        gap: 0.8rem;
+    }
+
+    .employee-grid {
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .employee-card {
+        width: 200px;
+    }
+
+    .employee-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .employee-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    header .logo {
+        position: static;
+    }
+
+    .employee-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .employee-card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .employee-card h3 {
+        font-size: 1rem;
+    }
+
+    .employee-card p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .employee-card {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .employee-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .employee-card p {
+        font-size: 0.8rem;
+    }
+
+    .popup {
+        width: 300px;
+    }
+}

@@ -176,76 +176,62 @@ video {
     }
 }
 
-@media (max-width: 1024px) {
-    header nav ul {
-        gap: 0.8rem;
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Уменьшение основного размера текста */
     }
 
-    h1 {
-        font-size: 30px;
-    }
-
-    .project {
-        width: 220px;
-    }
-
-    .project h3 {
-        font-size: 1.2rem;
-    }
-
-    .project p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 768px) {
-    header nav ul {
+    header {
         flex-direction: column;
-        gap: 0.5rem;
+        padding: 1rem;
         align-items: center;
     }
 
     header .logo {
-        position: static;
+        margin-bottom: 1rem;
+        width: 50px; /* Уменьшение логотипа */
+        height: 50px;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Расположение меню по вертикали */
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    header nav ul li a {
+        font-size: 14px; /* Уменьшение шрифта в меню */
+    }
+
+    .projects-container {
+        flex-direction: column; /* Выстраивание проектов по вертикали */
+        padding: 1rem;
     }
 
     .project {
-        width: 90%;
+        width: 90%; /* Увеличение ширины проекта для заполнения экрана */
         max-width: 300px;
+        padding: 1.5rem;
     }
 
-    h1 {
-        font-size: 25px;
-    }
-
-    .project h3 {
-        font-size: 1rem;
-    }
-
-    .project p {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 20px;
-    }
-
-    .project {
-        width: 100%;
-        max-width: 250px;
+    .project img {
+        width: 80px; /* Уменьшение размера изображения */
+        height: 80px;
     }
 
     .project h3 {
-        font-size: 0.9rem;
+        font-size: 1.2rem; /* Уменьшение заголовка */
     }
 
     .project p {
-        font-size: 0.8rem;
+        font-size: 0.9rem; /* Уменьшение текста описания */
     }
 
-    .popup {
-        width: 300px;
+    h1 {
+        font-size: 18px; /* Уменьшение заголовков */
+    }
+
+    video {
+        object-fit: contain; /* Избегаем обрезки видео */
     }
 }
